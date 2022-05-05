@@ -59,6 +59,64 @@ console.log(information.interest.outdoor[0].hiking[2]);
 
 // TODO: write your code below this line
 
+/* function to check whether two strings are
+    anagram of each other */
+function areAnagram(string1, string2) {
+  // Get lengths of both strings
+  let str1length = string1.length;
+  let str2Length = string2.length;
+
+  // If length of both strings is not same,
+  // then they cannot be anagram
+  if (str1length != str2Length) return false;
+
+  // Sort both strings
+  string1.sort();
+  string2.sort();
+
+  // Compare sorted strings
+  for (let i = 0; i < str1length; i++)
+    if (string1[i] != string2[i]) return false;
+
+  return true;
+}
+
+/* string variables*/
+let stringa = ["c", "i", "n", "e", "m", "a"];
+let stringb = ["i", "c", "e", "m", "a", "n"];
+
+let str1 = "cinema";
+let str2 = "iceman";
+
+let str3 = "cinema";
+let str4 = "icepan";
+
+let stringc = str1.split("");
+let stringd = str2.split("");
+
+let stringe = str3.split("");
+let stringf = str4.split("");
+// Function Call
+if (areAnagram((str1 = stringa), (str2 = stringb))) {
+  console.log("The two strings are anagram of each other");
+} else {
+  console.log("The two strings are not anagram of each other");
+}
+
+// Function Call
+if (areAnagram((string1 = stringc), stringd)) {
+  console.log("The second two strings are anagram of each other");
+} else {
+  console.log("The second two strings are not anagram of each other");
+}
+
+// Function Call
+if (areAnagram((string1 = stringe), stringf)) {
+  console.log("The second two strings are anagram of each other");
+} else {
+  console.log("The second two strings are not anagram of each other");
+}
+
 // TODO: write your code above this line
 
 // The lines of code below will be used for testing your function. don't change them
